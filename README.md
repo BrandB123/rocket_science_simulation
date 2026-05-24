@@ -1,6 +1,23 @@
 ## Purpose
 - Repository for model rocket flight simulation written in python.
 
+
+## Libraries to Keep in Mind
+- Numeric/Math
+  - NumPy
+
+- Plotting
+  - Matplotlib
+
+- Data Handling
+  - Pandas
+
+- Interpolation
+  - SciPy
+
+- Trajectory Simulation
+  - RocketPy
+
 ## TODO
 - Flight simulation for one rocket with one type of motor
   - Basic "gross" calculations
@@ -29,3 +46,45 @@
 - Build in ability to easily change out rocket and motor settings
 - Build out visual aspects of simulation instead of just logging data/results
 
+
+## Potential File Structure
+rocket_science_simulation/
+│
+├── pyproject.toml
+├── README.md
+├── .gitignore
+│
+├── src/
+│   └── rocket_sim/
+│       ├── __init__.py
+│       ├── main.py
+│       │
+│       ├── physics/
+│       │   ├── atmosphere.py
+│       │   ├── drag.py
+│       │   ├── gravity.py
+│       │   └── thrust.py
+│       │
+│       ├── simulation/
+│       │   ├── integrator.py
+│       │   ├── flight.py
+│       │   └── state.py
+│       │
+│       ├── vehicles/
+│       │   ├── rocket.py
+│       │   └── motors.py
+│       │
+│       ├── telemetry/
+│       │   ├── logger.py
+│       │   └── metrics.py
+│       │
+│       └── utils/
+│           └── units.py
+│
+├── tests/
+│
+├── scripts/
+│   └── run_simple_flight.py
+│
+└── data/
+    └── motors/
