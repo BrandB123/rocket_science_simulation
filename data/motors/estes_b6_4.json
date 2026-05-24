@@ -1,0 +1,8 @@
+{
+    "name": "Estes B6-4",
+    "mass": 0.0179,
+    "thrust_duration": 0.8,
+    "average_thrust": 6,
+    "delay": 4,
+    "total_impulse": 5
+}
