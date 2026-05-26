@@ -25,20 +25,11 @@ def main():
     state = FlightState()
     metrics = Metrics()
 
-    simulation_type = "basic"
+    # simulation_type = "basic"
+    simulation_type = "ascent"
 
-    # run_simulation(rocket, motor, simulation_type)
-    run_simulation(rocket, motor, state, metrics)
+    # run_simulation(rocket, motor, type=simulation_type)
+    run_simulation(rocket, motor, state, metrics, simulation_type)
 
-
-    # implemnt function for flight results with drag and call it here
-    #   for each time slice
-    #       calculate drag ( drag = 1/2 * air density * drag coefficient * frontal cross-sectional area * velocity^2 )
-    #       calculate forces at the current instant
-    #       compute accelaration
-    #       update velocity
-    #       update altitude
-    #       advance time
-    #       repeat
 
 main()
