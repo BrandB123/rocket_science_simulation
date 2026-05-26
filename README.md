@@ -21,7 +21,7 @@
 ## TODO
 - Flight simulation for one rocket with one type of motor
   - Basic "gross" calculations
-    - Log all the data
+    - Log all the data as added to program
       - time
       - altitude
       - velocity
@@ -87,4 +87,4 @@ rocket_science_simulation/
 │   └── run_simple_flight.py
 │
 └── data/
-    └── motors/
+      └── motors/
