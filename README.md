@@ -44,6 +44,7 @@
     - air density vs altitude
   - simulate parachute deployment and descent 
 - Build in ability to easily change out rocket and motor settings
+  - Add CLI selection for both based on rocket and motor configs
 - Build out visual aspects of simulation instead of just logging data/results
 
 
