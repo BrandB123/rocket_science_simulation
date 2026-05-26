@@ -1,6 +1,9 @@
+from src.rocket_simulation.simulation.metric import Metrics
+from src.rocket_simulation.simulation.runner import run_simulation
+from src.rocket_simulation.simulation.state import FlightState
+
 from src.rocket_simulation.vehicles.motors import Motor
 from src.rocket_simulation.vehicles.rockets import Rocket
-from src.rocket_simulation.simulation.launch import basic_flight_simulation
 
 import json
 from pathlib import Path
@@ -19,36 +22,13 @@ def main():
     rocket = Rocket(**rocket_data)
     motor = Motor(**motor_data)
 
-    print(
-        f"""
-        ---------------------------------------
+    state = FlightState()
+    metrics = Metrics()
 
-                  FLIGHT SIMULATION:
+    simulation_type = "basic"
 
-        ---------------------------------------
-
-                  ROCKET: {rocket.name}
-                  MOTOR:  {motor.name}
-
-        ---------------------------------------
-        """
-    )
-
-    try:
-        
-        print("           RESULTS: ")
-        basic_flight_simulation(rocket, motor)
-        print(""" 
-        --------------------------------------- 
-              
-            FLIGHT SIMULATION COMPLETED
-              
-        --------------------------------------- 
-        """)
-    except TypeError as e:
-        print(f"Type Error: {e}")
-    except ValueError as e:
-        print(f"Value Error: {e}")
+    # run_simulation(rocket, motor, simulation_type)
+    run_simulation(rocket, motor, state, metrics)
 
 
     # implemnt function for flight results with drag and call it here

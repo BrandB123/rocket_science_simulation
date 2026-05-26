@@ -19,7 +19,7 @@ def basic_flight_simulation(rocket, motor):
 
     #   acceleration from burn (a = net thrust / mass)
     acceleration = acceleration_from_burn(net_thrust, (rocket.mass + motor.mass))
-    print(f"            Accelertation:             {acceleration:.2f} m/s²")
+    print(f"            Acceleration:             {acceleration:.2f} m/s²")
 
     #   velocity at burnout (final velocity = initial velocity + acceleration * time)
     velocity_at_burnout = burnout_velocity(0, acceleration, motor.thrust_duration)
@@ -37,3 +37,14 @@ def basic_flight_simulation(rocket, motor):
     #   apogee in meters and feet ( altitude from burn + altitude from coast )
     apogee = burnout_altitude + coast_phase_altitude
     print(f"            Apogee:                    {apogee:.2f} m ({(apogee * FEET_PER_METER):.2f} ft)")
+
+
+def flight_simulation_step(rocket, motor, flight_state, flight_metrics, dt):
+    # calculate current thrust from motor
+    # calculate drag
+    # TODO: calculate weight
+    # calculate current net thrust after weight and drag
+    # calculate current acceleration
+    # calculate current velocity
+    # calculate current altitude
+    return
