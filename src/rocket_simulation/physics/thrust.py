@@ -31,3 +31,5 @@ def simple_thrust_from_burn(avg_thrust: float, vehicle_mass: float):
     
     return avg_thrust - weight
 
+def net_force(thrust, drag, weight):
+    return thrust - drag - weight
