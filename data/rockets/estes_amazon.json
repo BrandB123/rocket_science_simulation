@@ -1,4 +1,6 @@
 {
     "name": "Estes Amazon",
-    "mass": 0.093
+    "mass": 0.093,
+    "drag_coefficient": 0.6,
+    "tube_diameter_m": 0.034
 }
