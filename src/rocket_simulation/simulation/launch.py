@@ -36,5 +36,4 @@ def basic_flight_simulation(rocket, motor):
 
     #   apogee in meters and feet ( altitude from burn + altitude from coast )
     apogee = burnout_altitude + coast_phase_altitude
-    print(f"            Apogee:                    {apogee:.2f} m")
-    print(f"            Apogee:                    {(apogee * FEET_PER_METER):.2f} ft")
+    print(f"            Apogee:                    {apogee:.2f} m ({(apogee * FEET_PER_METER):.2f} ft)")
