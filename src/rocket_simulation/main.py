@@ -10,6 +10,7 @@ from pathlib import Path
 
 rocket_path = Path("data/rockets/estes_amazon.json")
 motor_path = Path("data/motors/estes_b6_4.json")
+# motor_path = Path("data/motors/estes_c6_5.json")
 
 
 def main():
