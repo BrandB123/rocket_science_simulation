@@ -20,24 +20,24 @@
 
 ## TODO
 - Flight simulation for one rocket with one type of motor
-  - Basic "gross" calculations
+  - ✅ Basic "gross" calculations
     - Log all the data as added to program
-      - time
-      - altitude
-      - velocity
-      - acceleration
-      - thrust
+      - ✅ time
+      - ✅ altitude
+      - ✅ velocity
+      - ✅ acceleration
+      - ✅ thrust
       - drag
-      - mass
+      - ✅ mass
       - dynamic pressure
       - NOTE: These logs can be easily transformed to graphs later
       - NOTE: This will make it easy to see:
-        - burnout
+        - ✅ burnout
         - drag buildup 
-        - coast phase
+        - ✅ coast phase
         - max Q
         - Terminal Behavior
-  - account for drag
+  - ✅ account for drag
   - account for changing mass of rocket during flight
   - account for thrust curve
   - account for changes in atmosphere
