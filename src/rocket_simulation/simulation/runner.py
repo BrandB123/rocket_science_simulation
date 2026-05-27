@@ -49,3 +49,5 @@ def ascent_runner(rocket, motor, state, metrics):
 
         if state.velocity <= 0 and state.time > 0:
             break
+    
+    metrics.log()

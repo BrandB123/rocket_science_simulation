@@ -87,5 +87,7 @@ def flight_simulation_step(rocket, motor, flight_state, flight_metrics, dt):
 ---------------------------------------------------------------------""")
 
     # update metrics
-    # log metrics
+    end_sim_condition = flight_state.velocity <= 0
+    flight_metrics.update(end_sim_condition, flight_state) 
+
     return
