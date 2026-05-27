@@ -42,12 +42,25 @@ def ascent_runner(rocket, motor, state, metrics):
     dt = 0.01
     state.mass = rocket.mass + motor.mass
 
-    print("""|   TIME   |     ALTITUDE     | VELOCITY | ACCELERATION |   MASS    |
----------------------------------------------------------------------""")
-    while True:
-        flight_simulation_step(rocket, motor, state, metrics, dt)
+    try:
 
-        if state.velocity <= 0 and state.time > 0:
-            break
-    
-    metrics.log()
+        print("""|   TIME   |     ALTITUDE     | VELOCITY | ACCELERATION |   MASS    |
+---------------------------------------------------------------------""")
+        while True:
+            flight_simulation_step(rocket, motor, state, metrics, dt)
+
+            if state.velocity <= 0 and state.time > 0:
+                break
+        
+        metrics.log()
+        print(""" 
+            --------------------------------------- 
+                
+                FLIGHT SIMULATION COMPLETED
+                
+            --------------------------------------- 
+            """)
+    except TypeError as e:
+        print(f"Type Error: {e}")
+    except ValueError as e:
+        print(f"Value Error: {e}") 
